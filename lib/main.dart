@@ -102,8 +102,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Stack(
         children: [
-          Image.asset('assets/images/newbg.jpg'),
-          SizedBox(height: 300, child: Center(child: Text('Prabhavi'))),
+          // Image.asset('assets/images/newbg.jpg'),
+          // SizedBox(height: 300, child: Center(child: Text('Prabhavi'))),
+          ListTile(
+            leading: Icon(Icons.person),
+            title: Text('Nathasha'),
+            tileColor: Colors.pinkAccent,
+            trailing: Text('end'),
+            onTap: () {},
+          ),
         ],
       ),
 
