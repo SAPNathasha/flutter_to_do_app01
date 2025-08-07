@@ -94,16 +94,17 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Container(
-        padding: EdgeInsets.all(50.0),
-        child: Stack(
-          children: [
-            Image.asset('assets/images/newbg.jpg'),
-            SizedBox(height: 300, child: Center(child: Text('Prabhavi'))),
-          ],
+        title: Text('My First Flutter App'),
+        leading: Icon(
+          Icons.notification_add,
+          color: const Color.fromARGB(255, 255, 255, 255),
         ),
+      ),
+      body: Stack(
+        children: [
+          Image.asset('assets/images/newbg.jpg'),
+          SizedBox(height: 300, child: Center(child: Text('Prabhavi'))),
+        ],
       ),
 
       floatingActionButton: FloatingActionButton(
