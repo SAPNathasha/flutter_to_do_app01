@@ -107,17 +107,15 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 height: 100.0,
                 width: 100.0,
-                padding: EdgeInsets.all(50.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25.0),
                   color: Colors.red,
                 ),
-                child: Text('Hello', style: TextStyle(color: Colors.blue)),
+                child: Center(child: Text('Prabhavi')),
               ),
               Container(
                 height: 100.0,
                 width: 100.0,
-                padding: EdgeInsets.all(50.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25.0),
                   color: Colors.red,
