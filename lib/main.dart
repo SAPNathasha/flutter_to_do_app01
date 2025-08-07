@@ -22,7 +22,15 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Prabhavi Nathasha'),
+          centerTitle: true,
+          leading: Icon(Icons.person),
+          actions: [Text('Contact me'), Icon(Icons.phone)],
+          backgroundColor: const Color.fromARGB(255, 14, 63, 104),
+        ),
+      ),
     );
   }
 }
