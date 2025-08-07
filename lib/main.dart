@@ -109,7 +109,9 @@ class _MyHomePageState extends State<MyHomePage> {
             title: Text('Nathasha'),
             tileColor: Colors.pinkAccent,
             trailing: Text('end'),
-            onTap: () {},
+            onTap: () {
+              print('This is my practice app');
+            },
           ),
         ],
       ),
