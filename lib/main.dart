@@ -27,8 +27,20 @@ class MyApp extends StatelessWidget {
           title: Text('Prabhavi Nathasha'),
           centerTitle: true,
           leading: Icon(Icons.person),
-          actions: [Text('Contact me'), Icon(Icons.phone)],
+          actions: [Icon(Icons.menu)],
           backgroundColor: const Color.fromARGB(255, 14, 63, 104),
+        ),
+        floatingActionButton: FloatingActionButton(onPressed: () {}),
+        bottomNavigationBar: NavigationBar(
+          destinations: [
+            NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+            NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+            NavigationDestination(icon: Icon(Icons.phone), label: 'phone'),
+          ],
+          onDestinationSelected: (value) {
+            print(value);
+          },
+          selectedIndex: 0,
         ),
       ),
     );
