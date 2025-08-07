@@ -100,19 +100,13 @@ class _MyHomePageState extends State<MyHomePage> {
           color: const Color.fromARGB(255, 255, 255, 255),
         ),
       ),
-      body: Stack(
+      body: Wrap(
         children: [
-          // Image.asset('assets/images/newbg.jpg'),
-          // SizedBox(height: 300, child: Center(child: Text('Prabhavi'))),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Nathasha'),
-            tileColor: Colors.pinkAccent,
-            trailing: Text('end'),
-            onTap: () {
-              print('This is my practice app');
-            },
+          Text(
+            'iwebdi qiueubbdx kqwhxb iqbwxkliv ervuer iwebdi qiueubbdx kqwhxb iqbwxkliv',
           ),
+          Text('iwebdi qiueubbdx kqwhxb iqbwxkliv ervuer'),
+          Text('iwebdi qiueubbdx kqwhxb iqbwxkliv ervuer'),
         ],
       ),
 
