@@ -22,35 +22,35 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      home: Scaffold(
-        appBar: AppBar(title: Text('Prabhavi Nathasha'), centerTitle: true),
-        drawer: SafeArea(
-          child: Column(
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(title: Text('Prabhavi Nathasha'), centerTitle: true),
+          drawer: Column(
             children: [
               DrawerHeader(child: Text('Drawer')),
               ListTile(title: Text('Logout')),
             ],
           ),
-        ),
-        floatingActionButton: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
-            SizedBox(height: 10.0),
-            FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
-          ],
-        ),
+          floatingActionButton: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
+              SizedBox(height: 10.0),
+              FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
+            ],
+          ),
 
-        bottomNavigationBar: NavigationBar(
-          destinations: [
-            NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-            NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
-            NavigationDestination(icon: Icon(Icons.phone), label: 'phone'),
-          ],
-          onDestinationSelected: (value) {
-            print(value);
-          },
-          selectedIndex: 0,
+          bottomNavigationBar: NavigationBar(
+            destinations: [
+              NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+              NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+              NavigationDestination(icon: Icon(Icons.phone), label: 'phone'),
+            ],
+            onDestinationSelected: (value) {
+              print(value);
+            },
+            selectedIndex: 0,
+          ),
         ),
       ),
     );
