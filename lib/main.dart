@@ -23,12 +23,14 @@ class MyApp extends StatelessWidget {
       ),
 
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Prabhavi Nathasha'),
-          centerTitle: true,
-          leading: Icon(Icons.person),
-          actions: [Icon(Icons.menu)],
-          backgroundColor: const Color.fromARGB(255, 14, 63, 104),
+        appBar: AppBar(title: Text('Prabhavi Nathasha'), centerTitle: true),
+        drawer: SafeArea(
+          child: Column(
+            children: [
+              DrawerHeader(child: Text('Drawer')),
+              ListTile(title: Text('Logout')),
+            ],
+          ),
         ),
         floatingActionButton: Column(
           mainAxisSize: MainAxisSize.min,
