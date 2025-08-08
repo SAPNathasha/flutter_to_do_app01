@@ -23,36 +23,49 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      home: SafeArea(
-        child: Scaffold(
-          appBar: AppBar(title: Text(name!), centerTitle: true),
-          drawer: Column(
-            children: [
-              DrawerHeader(child: Text('Drawer')),
-              ListTile(title: Text('Logout')),
-            ],
-          ),
-          floatingActionButton: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
-              SizedBox(height: 10.0),
-              FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
-            ],
-          ),
+      home: MyHomePage(),
+    );
+  }
+}
 
-          bottomNavigationBar: NavigationBar(
-            destinations: [
-              NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-              NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
-              NavigationDestination(icon: Icon(Icons.phone), label: 'phone'),
-            ],
-            onDestinationSelected: (value) {
-              print(value);
-            },
-            selectedIndex: 0,
-          ),
-        ),
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int currentState = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(name!), centerTitle: true),
+      drawer: Column(
+        children: [
+          DrawerHeader(child: Text('Drawer')),
+          ListTile(title: Text('Logout')),
+        ],
+      ),
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
+          SizedBox(height: 10.0),
+          FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
+        ],
+      ),
+
+      bottomNavigationBar: NavigationBar(
+        destinations: [
+          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+          NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+          NavigationDestination(icon: Icon(Icons.phone), label: 'phone'),
+        ],
+        onDestinationSelected: (value) {
+          print(value);
+        },
+        selectedIndex: currentState,
       ),
     );
   }
