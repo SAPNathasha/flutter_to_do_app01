@@ -7,6 +7,7 @@ void main() {
 //stateless
 //materialApp
 //scaffold
+String? name = "Prabhavi";
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
 
       home: SafeArea(
         child: Scaffold(
-          appBar: AppBar(title: Text('Prabhavi Nathasha'), centerTitle: true),
+          appBar: AppBar(title: Text(name!), centerTitle: true),
           drawer: Column(
             children: [
               DrawerHeader(child: Text('Drawer')),
